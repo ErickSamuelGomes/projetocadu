@@ -1,0 +1,13 @@
+.field-rules-card {
+    margin-bottom: 15px;
+    border: 0px;
+    border-top: 1px solid #f1f1f1;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+}
+
+.field-rules-delete .ico-square-minus:hover {
+    color: var(--red-500)!important;
+    transform: scale(1.2);
+        
+}

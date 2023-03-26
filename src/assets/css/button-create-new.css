@@ -1,0 +1,108 @@
+.body-modal-button-create {
+    background: #fff;
+}
+
+.button-create-col {
+    background: #F2F7F8; 
+    height: 100%;
+}
+
+.button-create-tabs {
+    padding-top: 0px;
+}
+
+.button-create-search {
+    background:linear-gradient(to right, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.button-create-search-text {
+    font-size: 1.0rem;
+}
+
+.card-body-button-create-new {
+    height: 240px; 
+    background: #F9F7F7; 
+    text-align: center; 
+    padding-top: 73px;
+}
+
+.icon-button-create {
+    color: #CF1A6E;
+}
+
+.icon-button-create:hover {
+    color: #573488;
+}
+
+.button-create-new-link {
+    text-align: center;
+}
+
+.top-modal-create-new {
+    border-bottom: 1px solid #DEE2E6;
+    padding: 10px 0px 10px 19px;
+}
+
+.buttons-create-new {
+    font-size: 16px; 
+    text-transform: none; 
+    text-align: left;
+    border-left: 1px #2962FF;
+    border-radius: 0px;
+}
+
+.buttons-create-new:hover {
+    background: #2962FF;
+    color: #fff;
+   
+    
+}
+
+.buttons-create-new-advanced {
+    font-size: 16px; 
+    text-transform: none; 
+    text-align: left;
+    border-left: 1px #7966EE;
+    border-radius: 0px;
+}
+
+.buttons-create-new-advanced:hover {
+    background: #7966EE;
+    color: #fff;
+   
+}
+
+.create-modal-img {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.card-title-create-new {
+    line-height: 2.0rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: none;
+}
+
+.card-subtitle-create-new {
+    font-weight: bold;
+    text-transform: uppercase;      
+}
+
+.card-text-create-new {
+    margin-bottom: 15px;
+}
+
+.card-fixed-height-367 {
+    min-height: 367px;
+    height: 367px;
+    max-height: 380px;
+}
+
+.tag-zeevit-create-new {
+    color: #7E458B;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: none;
+}
+
+

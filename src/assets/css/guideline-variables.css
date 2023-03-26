@@ -1,0 +1,233 @@
+.variables-default-color,.variables-default-title-color,.variables-primary-color,
+.variables-primary-hover-color,.variables-link-hover-color,.variables-secondary-color,
+.variables-tertiary-color,.variables-danger-color,.variables-text-info-color,
+.variables-link-color,.variables-link-hover-color,.variables-menu-link-color,
+.variables-new-color,.variables-primary-background,.variables-navbar-top-link-mobil,
+.variables-navbar-top-link-desktop,.variables-page-shortcuts-background,
+.variables-contrast-color-dark {
+    text-align: center; 
+    color: var(--contrast-color-white);
+}
+
+.variables-default-background-color,.variables-warning-color,.variables-info-color,
+.variables-info-variant-color,.variables-success-color,.variables-light-color,
+.variables-super-light-color,.variables-menu-background,.variables-primary-light-color,
+.variables-success-light-color,.variables-info-light-color,.variables-extra-light-color,
+.variables-warning-light-color,.variables-danger-light-color,.variables-navbar-top-background-desktop,
+.variables-navbar-top-background-mobile,.variables-navbar-bottom-background,.variables-box-background,
+.variables-color-gray-1,.variables-color-gray-2,.variables-color-gray-3,.variables-color-gray-4,
+.variables-color-gray-5,.variables-color-gray-6,.variables-color-gray-7,.variables-color-gray-8,
+.variables-color-gray-9,.variables-color-gray-10,.variables-focus-color,.variables-focus-color-inverted,
+.variables-hover-construtor-table,.variables-contrast-color-white  {
+    text-align: center; 
+    color: var(--contrast-color-dark);
+}
+
+.variables-default-color {
+    background-color: var(--gray-700);  
+}
+
+.variables-default-title-color {
+    background-color: var(--gray-900); 
+}
+
+.variables-primary-color {
+    background-color: var(--primary-color);  
+}
+
+.variables-primary-hover-color {
+    background-color: var(--primary-color); 
+}
+
+.variables-default-background-color {
+    background-color: var(--default-background-color); 
+}
+
+.variables-link-hover-color {
+    background-color: var(--indigo-800); 
+}
+
+.variables-secondary-color {
+    background-color: var(--secondary-color); 
+}
+
+.variables-tertiary-color {
+    background-color: var(--tertiary-color); 
+}
+
+.variables-danger-color {
+    background-color: var(--danger-color); 
+}
+
+.variables-warning-color {
+    background-color: var(--warning-color); 
+}
+
+.variables-info-color {
+    background-color: var(--info-color); 
+}
+
+.variables-text-info-color {
+    background-color: var(--text-info-color); 
+}
+
+.variables-info-variant-color {
+    background-color: var(--info-variant-color); 
+}
+
+.variables-success-color {
+    background-color: var(--success-color); 
+}
+
+.variables-light-color {
+    background-color: var(--light-color); 
+}
+
+.variables-super-light-color {
+    background-color: var(--super-light-color); 
+}
+
+.variables-link-color {
+    background-color: var(--indigo-700); 
+}
+
+.variables-link-hover-color {
+    background-color: var(--link-hover-color); 
+}
+
+.variables-menu-background {
+    background-color: var(--menu-background);
+}
+
+.variables-menu-link-color {
+    background-color: var(--menu-link-color); 
+}
+
+.variables-new-color {
+    background-color: var(--new-color); 
+}
+
+.variables-primary-light-color {
+    background-color: var(--indigo-100); 
+}
+
+.variables-success-light-color {
+    background-color: var(--success-light-color); 
+}
+
+.variables-info-light-color {
+    background-color: var(--info-light-color); 
+}
+
+.variables-extra-light-color {
+    background-color: var(--extra-light-color); 
+}
+
+.variables-warning-light-color {
+    background-color: var(--warning-light-color); 
+}
+
+.variables-danger-light-color {
+    background-color: var(--danger-light-color); 
+}
+
+.variables-inverse-light-color {
+    background-color: var(--inverse-light-color); 
+    color: var(--contrast-color-dark)!important;
+    text-align: center;
+}
+
+.variables-primary-background {
+    background: var(--primary-background); 
+}
+
+.variables-navbar-top-background-desktop {
+    background: var(--navbar-top-background-desktop); 
+}
+
+.variables-navbar-top-background-mobile {
+    background-color: var(--navbar-top-background-mobile); 
+}
+
+.variables-navbar-top-link-mobil {
+    background-color: var(--navbar-top-link-mobile); 
+}
+
+.variables-navbar-top-link-desktop {
+    background-color: var(--navbar-top-link-desktop); 
+}
+
+.variables-navbar-bottom-background {
+    background-color: var(--navbar-bottom-background); 
+}
+
+.variables-page-shortcuts-background {
+    background-color: var(--page-shortcuts-background); 
+}
+
+.variables-box-background {
+    background-color: var(--box-background); 
+}
+
+.variables-color-gray-1 {
+    background-color: var(--color-gray-1); 
+}
+
+.variables-color-gray-2 {
+    background-color: var(--color-gray-2); 
+}
+
+.variables-color-gray-3 {
+    background-color: var(--color-gray-3); 
+}
+
+.variables-color-gray-4 {
+    background-color: var(--color-gray-4); 
+}
+.variables-color-gray-5 {
+    background-color: var(--color-gray-5);
+}
+
+.variables-color-gray-6 {
+    background-color: var(--color-gray-6); 
+}
+
+.variables-color-gray-7 {
+    background-color: var(--color-gray-7);
+}
+
+.variables-color-gray-8 {
+    background-color: var(--color-gray-8); 
+}
+
+.variables-color-gray-9 {
+    background-color: var(--color-gray-9); 
+}
+
+.variables-color-gray-10 {
+    background-color: var(--color-gray-10); 
+}
+
+.variables-focus-color {
+    background-color: var(--focus-color); 
+}
+
+.variables-focus-color-inverted { 
+    background-color: var(--focus-color-inverted); 
+}
+
+.variables-hover-construtor-table {
+    background-color: var(--hover-construtor-table);
+}
+
+.variables-contrast-color-dark {
+    background-color: var(--contrast-color-dark); 
+}
+
+.variables-contrast-color-white {
+    background-color: var(--contrast-color-white); 
+}
+
+
+
+

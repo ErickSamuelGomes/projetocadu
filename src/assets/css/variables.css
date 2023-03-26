@@ -1,0 +1,267 @@
+/* Variables.css é o arquivo onde centralizamos decisões de estilos perceptuais como cores e tipos. Estas cores são usadas ao longo de toda a interface. */
+:root {
+    /* Tipografia */
+    --default-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --secondary-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --default-font-size: 16px;
+
+    /* Text Colors */
+    --default-color: #4B596D;
+    --default-title-color: #000000;
+    --link-color: #CF1A6E;
+    --link-hover-color: #573488;
+    --menu-link-color: #54667a;
+    --navbar-top-link-mobile: #000;
+    --navbar-top-link-desktop: #000;
+    --contrast-color-dark: #2E2E2E;
+    --contrast-color-white: #fff;
+    --page-title-bar-new-designer: #F1EFFD;
+    --ico-edit-bar: #bababa;
+    --white-text-color: #FFFFFF;
+    --black-text-color: #000000;
+    --text-info-color: #1976D2;
+
+    /* Background Colors */
+    --default-background-color: #f9f9f9;
+    --menu-background: #ffffff;
+    --primary-background: linear-gradient(to right, #f62d51 0%, #660fb5 100%);
+    --navbar-top-background-desktop: linear-gradient(to right, #cfd9df 0%, #e2ebf0 100%);
+    --navbar-top-background-mobile: #FFFFFF;
+    --navbar-bottom-background: #fafafa;
+    --page-shortcuts-background: #660fb5;
+    --box-background: #ffffff;
+    --white-background: #ffffff;
+    --black-background: #000000;
+    --secondary-text-color: #707070;
+
+    /* System Colors */
+    --primary-color: #7460ee;
+    --primary-hover-color: #4e3bc5;
+    --secondary-color: #e3e3e3;
+    --tertiary-color: #CF1A6E;
+    --danger-color: #DC3545;
+    --warning-color: #ffbc34;
+    --info-color: #2962FF;
+    --info-variant-color: #AB47BC;
+    --success-color: #55ce63;
+    --light-color: #f1f1f1;
+    --super-light-color: #f1f1f1;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --primary1: #c1b7f7;
+    --primary2: #9b89f5;
+    --primary3: #785ff7;
+    --primary4: #5b40e7;
+    --primary5: #452bc5;
+    --secondary1: #fafafa;
+    --secondary2: #f4f4f4;
+    --secondary3: #e3e3e3;
+    --secondary4: #d0d0d0;
+    --secondary5: #b7b7b7;
+    --tertiary1: #fd66ab;
+    --tertiary2: #fe3a98;
+    --tertiary3: #e2006f;
+    --tertiary4: #EB1C7C;
+    --tertiary5: #FB0074;
+    --danger1: #f87d8c;
+    --danger2: #F35A69;
+    --danger3: #DC3545;
+    --danger4: #D71527;
+    --danger5: #B51424;
+    --warning1: #FFE3AA;
+    --warning2: #FFCC65;
+    --warning3: #FFBC34;
+    --warning4: #FFB011;
+    --warning5: #F4A400;
+    --info1: #8DACFF;
+    --info2: #5482FF;
+    --info3: #2962FF;
+    --info4: #0D4DFF;
+    --info5: #003FEB;
+    --info-variant1: #E198ED;
+    --info-variant2: #CB66DC;
+    --info-variant3: #AB47BC;
+    --info-variant4: #9F20B5;
+    --info-variant5: #8C0FA1;
+    --success1: #AAEEB1;
+    --success2: #83EA8E;
+    --success3: #55CE63;
+    --success4: #39BE48;
+    --success5: #23B034;
+
+    /* System Light Colors */
+    --primary-light-color: #f1effd;
+    --success-light-color: #e8fdeb;
+    --info-light-color: #cfecfe;
+    --extra-light-color: #ebf3f5;
+    --warning-light-color: #fff8ec;
+    --danger-light-color: #f9e7eb;
+    --inverse-light-color: #f6f6f6;
+    --dark-light-color: #2f3d4a;
+
+    /* Gray Scale Colors */
+    --color-gray-1: #F0F0F0;
+    --color-gray-2: #E6E6E6;
+    --color-gray-3: #DCDCDC;
+    --color-gray-4: #D2D2D2;
+    --color-gray-5: #C8C8C8;
+    --color-gray-6: #BEBEBE;
+    --color-gray-7: #B4B4B4;
+    --color-gray-8: #AFAFAF;
+    --color-gray-9: #AAAAAA;
+    --color-gray-10: #A0A0A0;
+
+    /* Interactive States Colors */
+    --focus-color: #4C9AFF;
+    --focus-color-inverted: #ff4c9a;
+    --hover-construtor-table: #EAEAEA;
+    --bar-hover-new-desinger: #E5F5FF;
+
+    /* Shadows */
+    --shadow: 0 0 25px rgba(40,47,60,.05), 0 20px 25px rgba(40,47,60,.05), 0 3px 4px rgba(40,47,60,.05);
+    --default-button-shadow: 0 10px 14px rgba(50,50,93,.12), 0 3px 6px rgba(0,0,0,.08);
+    --btn-shadow: 0px 1px 2px var(--gray-300);
+    --btn-no-shadow: 0px 0px 0px rgba(0, ,0 ,0, 0);
+    --card-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.133);
+    --card-shadow-hover: 0 .25rem .75rem rgba(0, 0, 0, 0.077);
+    --shadow-sm: 0px 0px 4px #cacaca;
+
+    /* Proportions */
+    --navbar-top-height: 60px;
+    --navbar-bottom-height: 60px;
+    --zindex-page-header: 94;
+    --zindex-menu-left: 94;
+    --zindex-menu-left-opened: 96;
+    --zindex-dropdown-autosuggest: 94;
+    --zindex-goto-top: 94;
+    --zindex-toggle-container: 94;
+    --zindex-overlay: 95;
+    --zindex-preloader: 103;
+    --zindex-alert-system: 97;
+    --zindex-goto-main: 99;
+    --zindex-modal-backdrop: 100;
+    --zindex-modal: 101;
+    --zindex-notifications: 102;
+    --controls-selectr-padding: 0.52rem 0.8rem;
+    --controls-padding: 0.52rem 0.6rem;
+    --controls-line-height: 1.5;
+    --controls-radius: 0.35rem;
+    --menu-width: 300px;
+    --button-radius-md: 0.35rem;
+
+    /* Radius Sizes */
+    --radius-sm: 0.15rem;
+    --radius-md: 0.35rem;
+    --radius-lg: 0.70rem;
+    --radius-none: 0px;
+
+    /* Radius Controls */
+    /* Other colors */
+    --new-color: #197626;
+
+    /* Bootstrap 5 Colors */
+    --gray-white: rgba(255, 255, 255, 1);
+    --gray-100: rgba(248, 249, 250, 1);
+    --gray-200: rgba(233, 236, 239, 1);
+    --gray-300: rgba(222, 226, 230, 1);
+    --gray-400: rgba(206, 212, 218, 1);
+    --gray-500: rgba(173, 181, 189, 1);
+    --gray-600: rgba(108, 117, 125, 1);
+    --gray-700: rgba(73, 80, 87, 1);
+    --gray-800: rgba(52, 58, 64, 1);
+    --gray-900: rgba(33, 37, 41, 1);
+    --gray-black: rgba(0, 0, 0, 1);
+    --blue-100: rgba(231, 241, 255, 1);
+    --blue-200: rgba(158, 197, 254, 1);
+    --blue-300: rgba(110, 168, 254, 1);
+    --blue-400: rgba(61, 139, 253, 1);
+    --blue-500: rgba(13, 110, 253, 1);
+    --blue-600: rgba(10, 88, 202, 1);
+    --blue-700: rgba(8, 66, 152, 1);
+    --blue-800: rgba(5, 44, 101, 1);
+    --blue-900: rgba(3, 22, 51, 1);
+    --indigo-100: rgba(224, 207, 252, 1);
+    --indigo-200: rgba(194, 159, 250, 1);
+    --indigo-300: rgba(163, 112, 247, 1);
+    --indigo-400: rgba(133, 64, 245, 1);
+    --indigo-500: rgba(102, 16, 242, 1);
+    --indigo-600: rgba(82, 13, 194, 1);
+    --indigo-700: rgba(61, 10, 145, 1);
+    --indigo-800: rgba(41, 6, 97, 1);
+    --indigo-900: rgba(20, 3, 48, 1);
+    --purple-100: rgba(226, 217, 243, 1);
+    --purple-200: rgba(197, 179, 230, 1);
+    --purple-300: rgba(169, 142, 218, 1);
+    --purple-400: rgba(140, 104, 205, 1);
+    --purple-500: rgba(111, 66, 193, 1);
+    --purple-600: rgba(89, 53, 154, 1);
+    --purple-700: rgba(67, 40, 116, 1);
+    --purple-800: rgba(44, 26, 77, 1);
+    --purple-900: rgba(22, 13, 39, 1);
+    --pink-100: rgba(247, 214, 230, 1);
+    --pink-200: rgba(239, 173, 206, 1);
+    --pink-300: rgba(230, 133, 181, 1);
+    --pink-400: rgba(222, 92, 157, 1);
+    --pink-500: rgba(214, 51, 132, 1);
+    --pink-600: rgba(171, 41, 106, 1);
+    --pink-700: rgba(128, 31, 79, 1);
+    --pink-800: rgba(86, 20, 53, 1);
+    --pink-900: rgba(43, 10, 26, 1);
+    --red-100: rgba(248, 215, 218, 1);
+    --red-200: rgba(241, 174, 181, 1);
+    --red-300: rgba(234, 134, 143, 1);
+    --red-400: rgba(227, 93, 106, 1);
+    --red-500: rgba(220, 53, 69, 1);
+    --red-600: rgba(176, 42, 55, 1);
+    --red-700: rgba(132, 32, 41, 1);
+    --red-800: rgba(88, 21, 28, 1);
+    --red-900: rgba(44, 11, 14, 1);
+    --orange-100: rgba(255, 229, 208, 1);
+    --orange-200: rgba(254, 203, 161, 1);
+    --orange-300: rgba(254, 178, 114, 1);
+    --orange-400: rgba(253, 152, 67, 1);
+    --orange-500: rgba(253, 126, 20, 1);
+    --orange-600: rgba(202, 101, 16, 1);
+    --orange-700: rgba(152, 76, 12, 1);
+    --orange-800: rgba(101, 50, 8, 1);
+    --orange-900: rgba(51, 25, 4, 1);
+    --yellow-100: rgba(255, 243, 205, 1);
+    --yellow-200: rgba(255, 230, 156, 1);
+    --yellow-300: rgba(255, 218, 106, 1);
+    --yellow-400: rgba(255, 205, 57, 1);
+    --yellow-500: rgba(255, 193, 7, 1);
+    --yellow-600: rgba(204, 154, 6, 1);
+    --yellow-700: rgba(153, 116, 4, 1);
+    --yellow-800: rgba(102, 77, 3, 1);
+    --yellow-900: rgba(51, 39, 1, 1);
+    --green-100: rgba(209, 231, 221, 1);
+    --green-200: rgba(163, 207, 187, 1);
+    --green-300: rgba(117, 183, 152, 1);
+    --green-400: rgba(71, 159, 118, 1);
+    --green-500: rgba(25, 135, 84, 1);
+    --green-600: rgba(20, 108, 67, 1);
+    --green-700: rgba(15, 81, 50, 1);
+    --green-800: rgba(10, 54, 34, 1);
+    --green-900: rgba(5, 27, 17, 1);
+    --teal-100: rgba(210, 244, 234, 1);
+    --teal-200: rgba(166, 233, 213, 1);
+    --teal-300: rgba(121, 223, 193, 1);
+    --teal-400: rgba(77, 212, 172, 1);
+    --teal-500: rgba(32, 201, 151, 1);
+    --teal-600: rgba(26, 161, 121, 1);
+    --teal-700: rgba(19, 121, 91, 1);
+    --teal-800: rgba(13, 80, 60, 1);
+    --teal-900: rgba(6, 40, 30, 1);
+    --cyan-100: rgba(207, 244, 252, 1);
+    --cyan-200: rgba(158, 234, 249, 1);
+    --cyan-300: rgba(110, 223, 246, 1);
+    --cyan-400: rgba(61, 213, 243, 1);
+    --cyan-500: rgba(13, 202, 240, 1);
+    --cyan-600: rgba(10, 162, 192, 1);
+    --cyan-700: rgba(8, 121, 144, 1);
+    --cyan-800: rgba(5, 81, 96, 1);
+    --cyan-900: rgba(3, 40, 48, 1);
+}
+
+/* End confis */
+

@@ -1,0 +1,38 @@
+.a:focus {
+    box-shadow: 0 0 0 0.15rem var(--indigo-700);
+    border-color: transparent;
+}
+
+.btn:focus,
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-tertiary:focus,
+.btn-warning:focus,
+.btn-danger:focus,
+.btn-success:focus,
+.btn-info-variant:focus,
+.btn-info:focus,
+.btn-outline-primary:focus,
+.btn-outline-secondary:focus,
+.btn-outline-tertiary:focus,
+.btn-outline-success:focus,
+.btn-outline-info:focus,
+.btn-outline-info-variant:focus,
+.btn-outline-danger:focus,
+.btn-outline-warning:focus,
+.navbar-text:focus,
+.btn.dropdown-toggle:focus,
+.dropdown-item:focus,
+.btn-link:focus,
+.btn-secondary.disabled:focus,
+.page-link:focus, 
+.btn-secondary .dropdown-toggle:focus,
+tr[onkeypress]:focus {
+    box-shadow: 0 0 0 0.15rem var(--indigo-700)!important;
+    border-color: transparent;
+}
+
+.no-focus:focus {
+    box-shadow: var(--no-shadow)!important;
+    border-color: transparent!important;
+}

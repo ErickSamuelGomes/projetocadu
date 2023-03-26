@@ -1,0 +1,158 @@
+html, body, form {
+    height: 100%;
+}
+
+html {
+    font-size:12pt;
+    font-size:var(--default-font-size)!important;  
+    scroll-behavior:smooth; 
+    transition: opacity ease 1s;    
+    scrollbar-color: rgba(0,0,0,0.2)  #fafafa  rgba(0,0,0,0.5);
+    
+}
+
+
+body 
+{   
+    font-family: var(--default-font);
+    color:#54667a;
+    color: var(--default-color);
+    background-color:#f4f4f4;
+    background-color:var(--default-background-color);;    
+    font-weight:300;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;    
+    -webkit-overflow-scrolling:touch;
+    padding-left:0px;
+    padding-right:0px;
+    position: relative;
+    
+}
+
+table {
+    font-weight: 300;
+}
+
+a {
+    text-decoration:none;
+    color: var(--indigo-500);
+    border: none;
+}
+
+a:hover, a:focus {
+    color: var(--primary5);
+    text-decoration:none;
+}
+
+a:active {
+    border: none;
+}
+
+
+
+/*
+    Reboot
+*/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #fafafa;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    min-height: 30px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0,0,0,0.5); 
+  }
+  
+  ::-webkit-scrollbar-thumb:active {
+    background: rgba(0,0,0,0.7); 
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+  }
+  
+
+:focus {
+    outline-style:none!important;
+    box-shadow:none!important;
+
+}
+
+
+::placeholder,
+.form-contro::placeholder,  /* Chrome, Firefox, Opera, Safari 10.1+ */
+::-webkit-input-placeholder,
+.form-contro::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:#a1a1a1!important;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: inherit !important;
+  -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+/*overrides browser and bootstap style for html5 attribute required*/
+input:focus:required:invalid:focus,
+textarea:focus:required:invalid:focus,
+select:focus:required:invalid:focus 
+{
+   color:Black;
+  border-color: rgba(82, 168, 236, 0.8)!important;
+  outline: 0!important;
+  outline: thin dotted \9!important;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)!important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)!important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)!important;
+}
+
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+    cursor:pointer;
+}
+
+.input-error::-webkit-input-placeholder {
+    color:var(--red-500)!important;
+}
+ 
+.input-error:-moz-placeholder { /* Firefox 18- */
+    color:var(--red-500)!important;
+}
+ 
+.input-error::-moz-placeholder {  /* Firefox 19+ */
+    color:var(--red-500)!important;
+}
+ 
+.input-error:-ms-input-placeholder {  
+    color:var(--red-500)!important;
+}
+
+  
+.js {
+    visibility: visible;
+    opacity:1;
+}
+
+.no-js .visible-content {
+    display:none;
+    visibility: hidden !important;
+    opacity:0;
+}

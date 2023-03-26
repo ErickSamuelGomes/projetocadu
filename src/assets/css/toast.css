@@ -1,0 +1,245 @@
+.alert-notification {
+    padding: 10px 0px 0px 0px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border-color: #e0e0e0!important;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.10);
+    -o-transition: 200ms;
+    -ms-transition: 200ms;
+    -moz-transition: 200ms;
+    -webkit-transition: 200ms;
+}
+
+.alert-notification:hover {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.20);
+    border-color: #c9c5c5!important;
+}
+
+.alert-notification > button.close {
+    margin-right: 13px;
+    color: var(--contrast-color-dark)!important;
+    opacity: 0.2;
+    font-size: 2.0rem;
+    font-weight: 500;
+    line-height: 1;
+    text-shadow: var(--btn-no-shadow);
+    margin-top: -5px;
+    -o-transition: 200ms;
+    -ms-transition: 200ms;
+    -moz-transition: 200ms;
+    -webkit-transition: 200ms;
+}
+
+.alert-notification > button.close:hover {
+    margin-right: 13px;
+    color: var(--contrast-color-dark)!important;
+    opacity: 0.2;
+    font-size: 2.0rem;
+    font-weight: 500;
+    line-height: 1;
+    text-shadow: var(--btn-no-shadow);
+    margin-top: -5px;
+}
+
+.alert-notification > div.alert-notification-header.d-flex {
+    box-shadow: 0px 1px #e0e0e0;
+    padding-bottom: 2px;
+    padding-top: 5px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.alert-notification > div.alert-notification-header.d-flex > [class^='ico']{
+    color: rgb(138, 138, 138);
+    margin: -3px 5px 5px -2px!important;
+}
+
+.alert-notification > div.alert-notification-header.d-flex > h5.font-weight-bold {
+    color: rgb(138, 138, 138);
+    margin-bottom: 0px;
+    margin-top: -1px;
+    font-size: 0.9rem;
+}
+
+.alert-notification > div.alert-notification-body {
+    padding-bottom: 11px;
+    margin-bottom: 0px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 10px;
+    color: var(--contrast-color-dark);
+    background-color: rgb(245, 245, 245);
+    border-radius: 0px 0px 8px 8px;
+}
+
+.alert-notification > div.alert-notification-body > p {
+    padding-bottom: 0px;
+    margin-bottom:0px;
+}
+
+
+/* Alert Notification Success */
+
+
+.alert-notification-success {
+    padding: 10px 0px 0px 0px;
+    border-radius: 8px;
+    background-color: #2db54c;
+    border-color: #24873a!important;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.10);
+    -o-transition: 200ms;
+    -ms-transition: 200ms;
+    -moz-transition: 200ms;
+    -webkit-transition: 200ms;
+}
+
+.alert-notification-success:hover {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.20);
+    border-color: #1d9439!important; 
+}
+
+.alert-notification-success > button.close {
+    margin-right: 13px;
+    color: var(--contrast-color-dark)!important;
+    opacity: 0.2;
+    font-size: 2.0rem;
+    font-weight: 500;
+    line-height: 1;
+    text-shadow: var(--btn-no-shadow);
+    margin-top: -5px;
+    -o-transition: 200ms;
+    -ms-transition: 200ms;
+    -moz-transition: 200ms;
+    -webkit-transition: 200ms;
+}
+
+.alert-notification-success > button.close:hover {
+    margin-right: 13px;
+    color: var(--contrast-color-dark)!important;
+    opacity: 0.2;
+    font-size: 2.0rem;
+    font-weight: 500;
+    line-height: 1;
+    text-shadow: var(--btn-no-shadow);
+    margin-top: -5px;
+}
+
+.alert-notification-success > div.alert-notification-header.d-flex {
+    box-shadow: 0px 1px #e0e0e0;
+    padding-bottom: 2px;
+    padding-top: 5px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.alert-notification-success > div.alert-notification-header.d-flex > [class^='ico']{
+    color: rgb(255, 255, 255);
+    margin: -3px 5px 5px -2px!important;
+}
+
+.alert-notification-success > div.alert-notification-header.d-flex > h5.font-weight-bold {
+    color: rgb(255, 255, 255);
+    margin-bottom: 0px;
+    margin-top: -1px;
+    font-size: 0.9rem;
+}
+
+.alert-notification-success > div.alert-notification-body {
+    padding-bottom: 11px;
+    margin-bottom: 0px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 10px;
+    color: var(--contrast-color-dark);
+    background-color: #e6f5ea;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.alert-notification-success > div.alert-notification-body > p {
+    padding-bottom: 0px;
+    margin-bottom:0px;
+}
+
+
+/* Alert Notification Danger */
+
+
+.alert-notification-danger {
+    padding: 10px 0px 0px 0px;
+    border-radius: 8px;
+    background-color: #dc3545;
+    border-color: #dc3545!important;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.10);
+    -o-transition: 200ms;
+    -ms-transition: 200ms;
+    -moz-transition: 200ms;
+    -webkit-transition:200ms;
+}
+
+.alert-notification-danger:hover {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.20);
+    border-color: #8d2626!important;
+
+}
+
+.alert-notification-danger > button.close {
+    margin-right: 13px;
+    color: var(--contrast-color-dark)!important;
+    opacity: 0.2;
+    font-size: 2.0rem;
+    font-weight: 500;
+    line-height: 1;
+    text-shadow: var(--btn-no-shadow);
+    margin-top: -5px;
+    -o-transition: 200ms;
+    -ms-transition: 200ms;
+    -moz-transition: 200ms;
+    -webkit-transition: 200ms;
+}
+
+.alert-notification-danger > button.close:hover {
+    margin-right: 13px;
+    color: var(--contrast-color-dark)!important;
+    opacity: 0.2;
+    font-size: 2.0rem;
+    font-weight: 500;
+    line-height: 1;
+    text-shadow: var(--btn-no-shadow);
+    margin-top: -5px;
+}
+
+.alert-notification-danger > div.alert-notification-header.d-flex {
+    box-shadow: 0px 1px #e0e0e0;
+    padding-bottom: 2px;
+    padding-top: 5px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.alert-notification-danger > div.alert-notification-header.d-flex > [class^='ico']{
+    color: rgb(255, 255, 255);
+    margin: -3px 5px 5px -2px!important;
+}
+
+.alert-notification-danger > div.alert-notification-header.d-flex > h5.font-weight-bold {
+    color: rgb(255, 255, 255);
+    margin-bottom: 0px;
+    margin-top: -1px;
+    font-size: 0.9rem;
+}
+
+.alert-notification-danger > div.alert-notification-body {
+    padding-bottom: 11px;
+    margin-bottom: 0px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 10px;
+    color: var(--contrast-color-dark);
+    background-color: #ffe7e9;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.alert-notification-danger > div.alert-notification-body > p {
+    padding-bottom: 0px;
+    margin-bottom:0px;
+}

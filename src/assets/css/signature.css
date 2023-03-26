@@ -1,0 +1,26 @@
+.body-modal-signature {
+    background-color: #F2F7F8;
+}
+
+.icons-signature {
+    width: 15px;
+    height: 15px;
+}
+
+.signature-asine {
+    position:sticky;
+    top:0px;
+}
+
+.signature-names {
+    font-size: 10px;
+}
+
+.signature-color-link {
+    color: var(--link-color);
+}
+
+.signature-background-control {
+    background-color: #ffff; 
+   
+}

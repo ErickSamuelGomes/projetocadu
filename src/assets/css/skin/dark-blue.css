@@ -1,0 +1,5 @@
+﻿body {
+    --navbar-top-background-desktop: linear-gradient(to right, #1488CC 0%, #2B32B2 100%);
+    --navbar-top-link-desktop: #fff;
+}
+

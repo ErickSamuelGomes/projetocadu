@@ -1,0 +1,119 @@
+
+.alert {
+font-weight: 500;
+border-radius: var(--radius-md);
+}
+
+.alert-primary,
+.alert-light-primary {
+    background-color: var(--indigo-100);
+    border-color: var(--indigo-400);
+    color: var(--indigo-700);
+}
+
+.alert-primary [class^='ico-'],
+.alert-light-primary [class^='ico-'] { 
+    color: var(--indigo-700);
+}
+
+.alert-primary a,
+.alert-light-primary a {
+    color: var(--indigo-700);;
+    font-weight: bold;    
+}
+
+.alert-secondary,
+.alert-light-extra,
+.alert-light-secondary,
+.alert-light-inverse {
+color: var(--gray-600);
+background-color: var(--gray-100);
+border-color: var(--gray-500);
+}
+
+.alert-secondary [class^='ico-'],
+.alert-light-extra [class^='ico-'],
+.alert-light-secondary [class^='ico-'],
+.alert-light-inverse [class^='ico-'] {
+    color: var(--gray-600);
+}
+
+.alert-success,
+.alert-light-success {
+    background-color: var(--teal-100);
+    border-color: var(--green-600);
+    color: var(--green-700);
+}
+
+.alert-success h3,
+.alert-light-success h3 {
+    color: var(--green-700)!important;
+}
+
+.alert-info,
+.alert-light-info {
+    background-color: var(--blue-100);
+    color: var(--blue-400);
+    border-color: var(--blue-400);
+}
+
+.alert-info [class^='ico-'],
+.alert-light-info [class^='ico-'] { 
+    color: var(--blue-400);
+}
+
+.alert-warning,
+.alert-light-warning {
+    background-color: var(--yellow-100);
+    color: var(--yellow-700);
+    border-color: var(--yellow-600);
+}
+
+.alert-warning h3,
+.alert-warning h3 {
+    color: var(--orange-600)!important;
+}
+
+.alert-danger,
+.alert-light-danger {
+    background-color: var(--red-200);
+    border-color: var(--red-600);
+    color: var(--red-700);
+}
+
+.alert-danger [class^='ico-'] { 
+    color: var(--red-700);
+}
+
+.alert-dismissible .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0.75rem 1.25rem;
+  color: inherit;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+  }
+
+  button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+  }
+  
+  a.close.disabled {
+    pointer-events: none;
+  }
+
+.alert-light-success [class^="ico-"] {
+    color: var(--green-600);
+}

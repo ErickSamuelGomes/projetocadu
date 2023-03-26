@@ -1,0 +1,44 @@
+.box-title {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: capitalize!important;
+}
+
+.caption {
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+color: #54667A;
+}
+
+
+.sidebar-subtitle {
+    font-size: .8em;
+    color: var(--indigo-700);
+}
+
+tbody#containerReport tr.prefetch td h5.bold {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 2px;
+    margin-top: 5px;
+  }
+
+tbody#containerReport tr.prefetch td h6 {
+    font-size: .9rem;
+    color: var(--gray-600);
+    font-weight: 400;
+}
+
+tbody#containerReport tr.prefetch td.d-none.d-xl-table-cell.small div.text-danger.bold.text-uppercase {
+font-weight: 600;
+color: var(--red-400) !important;
+margin-top: 5px;
+}
+
+tbody#containerReport tr.prefetch td.d-none.d-lg-table-cell div.form-check {
+    margin-top: 11px!important;
+}
+

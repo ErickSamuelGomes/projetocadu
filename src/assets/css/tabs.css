@@ -1,0 +1,53 @@
+
+ul#containerAllTeamsRender.list-unstyled.bold li.nav-item a.nav-link,
+ul#containerMostAccessedTeamsRender.list-unstyled.bold li.nav-item a.nav-link.text-truncate {
+    padding-left: 30px!important;
+    color: var(--gray-600);
+    border-radius: 7px;
+}
+
+ul#containerAllTeamsRender.list-unstyled.bold li.nav-item a.nav-link:hover,
+ul#containerMostAccessedTeamsRender.list-unstyled.bold li.nav-item a.nav-link.text-truncate:hover {
+    background-color: var(--gray-100);
+    color: var(--gray-700);
+}
+
+ul#containerAllTeamsRender.list-unstyled.bold li.nav-item a.nav-link:active,
+ul#containerMostAccessedTeamsRender.list-unstyled.bold li.nav-item a.nav-link.text-truncate:active {
+    color: var(--indigo-600) !important;
+}
+
+ul#containerAllTeamsRender.list-unstyled.bold li.nav-item a.nav-link:focus,
+ul#containerMostAccessedTeamsRender.list-unstyled.bold li.nav-item a.nav-link.text-truncate:focus {
+    box-shadow: 0 0 0 .1rem var(--indigo-200) !important;
+    color: var(--indigo-600) !important;
+}
+
+#containerTeams .active {
+    background-color: var(--gray-100);
+    color: var(--indigo-600) !important;
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: var(--indigo-500);
+    border-color: var(--indigo-500);
+}
+
+.nav-link {
+    color: var(--gray-900);
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: var(--indigo-600);
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: var(--indigo-600);
+    font-weight: 600;
+    background-color: #fff0;
+    border-bottom-color: white;
+    border-bottom-width: 2px;
+  }

@@ -1,0 +1,183 @@
+/*
+    Internet explorer
+*/
+
+.no-svg [class^='ico-']{
+    /*display:none!important;*/
+    text-indent: 0px;
+    width:auto;
+    height:auto;
+    font-style:normal!important;
+}
+
+.no-border .hidden-no-border {
+    display:none;
+}
+
+
+.no-flex .card-group .card, 
+.no-flex .col-1, .no-flex .col-2, .no-flex .col-3, .no-flex  .col-4, .no-flex  .col-5, .no-flex  .col-6, .no-flex .col-7,.no-flex .col-8,.no-flex .col-9,.no-flex .col-10,.no-flex .col-11,.no-flex .col-12,
+.no-flex .col-sm-1,.no-flex .col-sm-2,.no-flex .col-sm-3,.no-flex .col-sm-4,.no-flex .col-sm-5,.no-flex .col-sm-6,.no-flex .col-sm-7,.no-flex .col-sm-8,.no-flex .col-sm-9,.no-flex .col-sm-10,.no-flex .col-sm-11,.no-flex .col-sm-12,
+.no-flex .col-md-1,.no-flex .col-md-2,.no-flex .col-md-3,.no-flex .col-md-4,.no-flex .col-md-5,.no-flex .col-md-6,.no-flex .col-md-7,.no-flex .col-md-8,.no-flex .col-md-9,.no-flex .col-md-10,.no-flex .col-md-11,.no-flex .col-md-12,
+.no-flex .col-lg-1,.no-flex .col-lg-2,.no-flex .col-lg-3,.no-flex .col-lg-4,.no-flex .col-lg-5,.no-flex .col-lg-6,.no-flex .col-lg-7,.no-flex .col-lg-8,.no-flex .col-lg-9,.no-flex .col-lg-10,.no-flex .col-lg-11,.no-flex .col-lg-12,
+.no-flex .col-xl-1,.no-flex .col-xl-2,.no-flex .col-xl-3,.no-flex .col-xl-4,.no-flex .col-xl-5,.no-flex .col-xl-6,.no-flex .col-xl-7,.no-flex .col-xl-8,.no-flex .col-xl-9,.no-flex .col-xl-10,.no-flex .col-xl-11,.no-flex .col-xl-12
+{float:left;}
+
+.no-flex .form, .no-flex .buttons, .no-flex section , .no-flex .row, .no-flex .container-fluid, .no-flex .container {clear:both;display:block;width:100%;height:100%;}
+
+.no-flex .page-item {
+    display:inline!important;
+}
+
+.no-flex .pagination > div,
+.no-flex .pagination > li,
+.no-flex .navbar > div,
+.no-flex .navbar > a,
+.no-flex .navbar > ul {
+    display:inline;
+}
+
+.no-flex .card-body {
+    clear:both;
+}
+
+.no-flex .card-footer {
+    clear:both;
+    display:block;    
+}
+
+
+.no-flex .btn-block {
+    display:inline;
+}
+
+.no-flex .input-group > *{
+    float:left;
+}
+
+.no-flex .page-body-with-menu-left {
+    margin-left:260px;
+}
+.no-flex .navbar {
+    display:table;
+    width:100%;
+}
+.no-flex .navbar > * {
+    display:table-column;
+}
+
+
+.no-rem h1{
+    font-size:160%;
+}
+.no-rem h2{
+    font-size:140%;
+}
+.no-rem h3{
+    font-size:120%;
+}
+.no-rem h4{
+    font-size:115%;
+}
+.no-rem h5{
+    font-size:80%;
+}
+
+.no-rem .menu h5 {
+    margin-top:25px;
+}
+
+.no-rem .page-link,
+.no-rem .padded,
+.no-rem .nav-link ,
+.no-rem .alert,
+.no-rem .btn,
+.no-rem .card-body  {
+    padding:10px;
+}
+
+/*
+ @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .alert-minimal-support {
+        display:block!important;
+    }
+}*/
+ 
+/*
+IE 10+
+*/
+.minimal-support .hidden-minimal-support, 
+.minimal-support .hide-minimal-support{
+    display:none!important;
+}
+.minimal-support  .show-only-basic-old{
+    display:block!important;
+}
+
+.minimal-support .navbar {
+     margin:0px!important;
+     padding:0px!important;
+ }
+
+.minimal-support  .dropdown-menu {
+    border:1px solid #cccccc;
+}
+
+.minimal-support .alert-minimal-support {
+    display:block!important;
+}
+
+.minimal-support  .collapse {
+    display:block!important;
+}
+
+.minimal-support  .app-overlay {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    width:100%;
+    height:100%;
+    background-color:#000000;
+}
+
+.minimal-support  .sk-cube{
+    display:none;
+}
+
+.minimal-support  .loading .loading-text {
+    display:block!important;
+}
+
+/*
+end IE 10+
+*/
+
+/*IE9- */
+.not-supported .visible-content
+{
+    display:none;
+    visibility: hidden !important;
+    opacity:0;
+}
+
+.not-supported .alert-system {
+    margin-left:0px;
+    width:100%;
+    top:0px;
+}
+
+.not-supported .alert-system .alert {
+    display:none;
+}
+
+.not-supported .alert-not-supported {
+    display:block!important;    
+}
+.not-supported .page-header,
+.not-supported .alert-minimal-support,
+.not-supported .menu,
+.not-supported .page-title {
+    display:none!important;
+}
+/*
+    end IE9- 
+*/

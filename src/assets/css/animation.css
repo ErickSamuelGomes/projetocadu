@@ -1,0 +1,18 @@
+.remove-object {
+    overflow:hidden;
+    height:0px!important;
+    min-height:0px!important;
+    max-height:0px!important;
+    transition:  all 1s ease-out; 
+    opacity:0.4!important;
+    text-decoration: line-through ;
+    cursor:default!important;
+}
+.remove-object:hover td {
+    cursor:default!important;
+}
+
+.remove-object .btn,
+.remove-object .custom-checkbox{
+    display:none;
+}
