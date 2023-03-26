@@ -1,3 +1,22 @@
+import imagemin from 'gulp-imagemin';
+import gulp from 'gulp';
+import clean from 'gulp-clean';
+import concat from 'gulp-concat';
+import htmlReplace from 'gulp-html-replace';
+import cssnano from 'gulp-cssnano';
+import uglify from 'gulp-uglify-es';
+import path from 'path';
+import jshint from 'gulp-jshint';
+import browserSync from 'browser-sync';
+import jshintStylish from 'jshint-stylish';
+import csslint from 'gulp-csslint';
+import svgo from 'gulp-svgo';
+import svgSprite from 'gulp-svg-sprite';
+import header from 'gulp-header';
+import gutil from 'gulp-util';
+import babel from 'gulp-babel';
+import sourcemaps from 'gulp-sourcemaps';
+
 // Version file JS 
 var versaoDoJs = "/* Version Orquestra-Bootstrap - 1.0.3*/";
 
@@ -10,7 +29,7 @@ var copy = [
     '!src/assets/icon/custom{,/**}',
     '!src/assets/icon/feather{,/**}',
     '!src/assets/icon/flags{,/**}',
-    '!src/assets/icon/microsoft{,/**}',    
+    '!src/assets/icon/microsoft{,/**}',
     '!src/assets/icon/store{,/**}'
 ];
 
@@ -51,7 +70,7 @@ var css = [
     'dist/assets/css/toast.css',
     'dist/assets/css/form-builder.css',
     'dist/assets/css/global.css'
-  ];
+];
 
 var csseditor = [
     'dist/vendor/quill-1.3.6/quill.snow.css',
@@ -119,209 +138,187 @@ var configSvg = {
             example: false
         }
     },
-    transform: [{svgo: false}],
+    transform: [{ svgo: false }],
 
     shape: {
-        id: {							
-            generator: function(name) {
-                return path.basename(name).replace('.svg','');
+        id: {
+            generator: function (name) {
+                return path.basename(name).replace('.svg', '');
             }
         },
         dimension: {
-          maxWidth: 32,
-          maxHeight: 32
+            maxWidth: 32,
+            maxHeight: 32
         }
     },
     svg: {
         xmlDeclaration: false,
         doctypeDeclaration: false,
-        namespaceIDs: false,         
-        dimensionAttributes: false,                   
+        namespaceIDs: false,
+        dimensionAttributes: false,
     }
 };
 
 
 // Tasks 
-var gulp = require ('gulp'),
-    clean = require('gulp-clean'),
-    concat = require('gulp-concat'),
-    htmlReplace = require('gulp-html-replace'),
-    cssnano = require ('gulp-cssnano'),
-    uglify = require ('gulp-uglify-es').default,
-    path = require('path'),
-    imagemin = require('gulp-imagemin'),
-    watch = require('gulp-watch'),
-    rename = require('gulp-rename'),
-    jshint = require('gulp-jshint'),
-    browserSync = require('browser-sync'),
-    jshintStylish = require('jshint-stylish'),
-    csslint = require('gulp-csslint'),
-    svgo = require('gulp-svgo'),
-    svgSprite = require('gulp-svg-sprite'),
-    header = require('gulp-header');
-    gutil = require( 'gulp-util');  
-    vinylFilterSince = require('vinyl-filter-since');
-    babel = require('gulp-babel');
-    sourcemaps = require('gulp-sourcemaps');    
-    
-
-    gulp.task('clean', () => {
-        return gulp.src('dist', { allowEmpty: true })
-            .pipe(clean());
-    });
-
-    gulp.task('copy', gulp.series('clean', function(){
-        return gulp.src(copy)
-            .pipe(gulp.dest('dist'));
-    }));
-
-
-    // Compressing svg's
-    gulp.task('svgo', () => {
-        return gulp.src('src/assets/icon/**/*.svg')
-            .pipe(svgo())
-            .pipe(gulp.dest('dist/assets/icon'));
-    });
-
-    // Generetor Sprites SVG's
-    gulp.task('clean-sprites', function () {
-        return gulp.src(svgSprites, {read: false})
+gulp.task('clean', () => {
+    return gulp.src('dist', { allowEmpty: true })
         .pipe(clean());
-    });
+});
 
-    gulp.task('sprites', gulp.series('clean-sprites', function(){
-        return gulp.src(svgs)
+gulp.task('copy', gulp.series('clean', function () {
+    return gulp.src(copy)
+        .pipe(gulp.dest('dist'));
+}));
+
+
+// Compressing svg's
+gulp.task('svgo', () => {
+    return gulp.src('src/assets/icon/**/*.svg')
+        .pipe(svgo())
+        .pipe(gulp.dest('dist/assets/icon'));
+});
+
+// Generetor Sprites SVG's
+gulp.task('clean-sprites', function () {
+    return gulp.src(svgSprites, { read: false })
+        .pipe(clean());
+});
+
+gulp.task('sprites', gulp.series('clean-sprites', function () {
+    return gulp.src(svgs)
         .pipe(svgSprite(configSvg))
         .pipe(gulp.dest('src/assets/icon'))
-    }));
+}));
 
-    // Babel
-    gulp.task('babel', () => {
-        gulp.src('src/js/*.js')
-            .pipe(babel({
-                presets: ['es2015']
-                // plugins: ['transform-runtime']
-            }))
-            .pipe(gulp.dest('dist/js'))
-    });
+// Babel
+gulp.task('babel', () => {
+    gulp.src('src/js/*.js')
+        .pipe(babel({
+            presets: ['es2015']
+            // plugins: ['transform-runtime']
+        }))
+        .pipe(gulp.dest('dist/js'))
+});
 
-    //  Compressing Images
-    gulp.task('images', done => {
-        gulp.src(img)
+//  Compressing Images
+gulp.task('images', done => {
+    gulp.src(img)
         .pipe(imagemin())
         .pipe(gulp.dest('dist/assets/logos'));
-        done();
-    });
-
-    // Concat and minify
-    gulp.task('scripts', () => {
-        return gulp.src(js)
-            .pipe(sourcemaps.init() )
-            .pipe(concat('orquestra-bootstrap.min.js'))
-            .pipe(uglify())
-            .on('error', console.error.bind(console), function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-            .pipe(header(versaoDoJs))   
-            .pipe(sourcemaps.write('./')) 
-            .pipe(gulp.dest('dist/assets/js'))
-    });
-
-    // Concat and minify
-    gulp.task('scripts-mask', () => {
-        return gulp.src(jsmask)
-            .pipe(sourcemaps.init() )
-            .pipe(concat('orquestra-bootstrap-inputmask.min.js'))
-            .on('error', console.error.bind(console), function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-            .pipe(header(versaoDoJs))   
-            .pipe(sourcemaps.write('./')) 
-            .pipe(gulp.dest('dist/assets/js'))
-    });
+    done();
+});
 
 // Concat and minify
-    gulp.task('scripts-editor', () => {
-        return gulp.src(jseditor)
-            .pipe(sourcemaps.init() )
-            .pipe(concat('orquestra-bootstrap-editor.min.js'))
-            .on('error', console.error.bind(console), function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-            .pipe(header(versaoDoJs))   
-            .pipe(sourcemaps.write('./')) 
-            .pipe(gulp.dest('dist/assets/js'))
-    });
+gulp.task('scripts', () => {
+    return gulp.src(js)
+        .pipe(sourcemaps.init())
+        .pipe(concat('orquestra-bootstrap.min.js'))
+        .pipe(uglify.default())
+        .on('error', console.error.bind(console), function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+        .pipe(header(versaoDoJs))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('dist/assets/js'))
+});
+
+// Concat and minify
+gulp.task('scripts-mask', () => {
+    return gulp.src(jsmask)
+        .pipe(sourcemaps.init())
+        .pipe(concat('orquestra-bootstrap-inputmask.min.js'))
+        .on('error', console.error.bind(console), function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+        .pipe(header(versaoDoJs))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('dist/assets/js'))
+});
+
+// Concat and minify
+gulp.task('scripts-editor', () => {
+    return gulp.src(jseditor)
+        .pipe(sourcemaps.init())
+        .pipe(concat('orquestra-bootstrap-editor.min.js'))
+        .on('error', console.error.bind(console), function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+        .pipe(header(versaoDoJs))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('dist/assets/js'))
+});
 
 
-    gulp.task('css', () => {
-        return gulp.src(css)
-            .pipe(concat('orquestra-bootstrap.min.css'))
-            .pipe(cssnano({safe: true, autoprefixer: {
+gulp.task('css', () => {
+    return gulp.src(css)
+        .pipe(concat('orquestra-bootstrap.min.css'))
+        .pipe(cssnano({
+            safe: true, autoprefixer: {
                 remove: false
-              }}))
-            .pipe(header(versaoDoCss))            
-            .pipe(gulp.dest('dist/assets/css'))
-        });
-
-    gulp.task('css-editor', () => {
-        return gulp.src(csseditor)
-            .pipe(concat('orquestra-bootstrap-editor.min.css'))
-            .pipe(cssnano({safe: true}))
-            .pipe(header(versaoDoCss))            
-            .pipe(gulp.dest('dist/assets/css'))
-        });  
-
-
-    gulp.task('css-light', () => {
-        return gulp.src(csslight)
-            .pipe(concat('orquestra-bootstrap-light.min.css'))
-            .pipe(cssnano({safe: true}))
-            .pipe(header(versaoDoCss))            
-            .pipe(gulp.dest('dist/assets/css'))
-        });        
-
-    // Change directory name in html
-    gulp.task('html', done => {
-        gulp.src('dist/**/*.html')
-            .pipe(htmlReplace({
-                css: 'assets/css/orquestra-bootstrap.min.css',
-                js: 'assets/js/orquestra-bootstrap.min.js'
-            }))
-            .pipe(gulp.dest('dist'))
-        done();
-    });
-
-    gulp.task('minify',  gulp.series(['scripts', 'css', 'scripts-mask', 'scripts-editor', 'css-light', 'css-editor']));
-
-    gulp.task('default', gulp.series('copy', 'sprites', 'minify', 'html', 'images', function(done){
-        //gulp.start('sprites', 'minify', 'html', 'images');
-        done();
-
-    }));
-
-    gulp.task('server', () => {
-        browserSync.init({
-            server: {
-                baseDir: 'src'
             }
-        });
+        }))
+        .pipe(header(versaoDoCss))
+        .pipe(gulp.dest('dist/assets/css'))
+});
+
+gulp.task('css-editor', () => {
+    return gulp.src(csseditor)
+        .pipe(concat('orquestra-bootstrap-editor.min.css'))
+        .pipe(cssnano({ safe: true }))
+        .pipe(header(versaoDoCss))
+        .pipe(gulp.dest('dist/assets/css'))
+});
+
+
+gulp.task('css-light', () => {
+    return gulp.src(csslight)
+        .pipe(concat('orquestra-bootstrap-light.min.css'))
+        .pipe(cssnano({ safe: true }))
+        .pipe(header(versaoDoCss))
+        .pipe(gulp.dest('dist/assets/css'))
+});
+
+// Change directory name in html
+gulp.task('html', done => {
+    gulp.src('dist/**/*.html')
+        .pipe(htmlReplace({
+            css: 'assets/css/orquestra-bootstrap.min.css',
+            js: 'assets/js/orquestra-bootstrap.min.js'
+        }))
+        .pipe(gulp.dest('dist'))
+    done();
+});
+
+gulp.task('minify', gulp.series(['scripts', 'css', 'scripts-mask', 'scripts-editor', 'css-light', 'css-editor']));
+
+gulp.task('default', gulp.series('copy', 'sprites', 'minify', 'html', 'images', function (done) {
+    //gulp.start('sprites', 'minify', 'html', 'images');
+    done();
+
+}));
+
+gulp.task('server', () => {
+    browserSync.init({
+        server: {
+            baseDir: 'src'
+        }
+    });
 
     gulp.watch('src/**/*').on('change', browserSync.reload);
 
     gulp.watch('src/assets/js/**/*.js').on('change', (event) => {
         console.log("Linting " + event.path);
-            gulp.src(event.path)
-                .pipe(jshint())
-                .pipe(jshint.reporter(jshintStylish));
+        gulp.src(event.path)
+            .pipe(jshint())
+            .pipe(jshint.reporter(jshintStylish));
     });
 
     gulp.watch('src/assets/css/**/*.css').on('change', (event) => {
         console.log("Linting " + event.path);
-            gulp.src(event.path)
-                .pipe(csslint())
-                .pipe(csslint.reporter());
-    });    
+        gulp.src(event.path)
+            .pipe(csslint())
+            .pipe(csslint.reporter());
+    });
 
 });
 
-    gulp.task('watch', () => {
-        gulp.watch(js, ['scripts']);
-        gulp.watch(css, ['css']);
-    });
+gulp.task('watch', () => {
+    gulp.watch(js, ['scripts']);
+    gulp.watch(css, ['css']);
+});
 
-    
